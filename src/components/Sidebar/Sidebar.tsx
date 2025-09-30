@@ -1,4 +1,3 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -9,12 +8,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
 import { PowerGlitch } from "powerglitch";
+import { useEffect } from "react";
 import LogoAC from "../../assets/images/logo-ac.png";
 import "./Sidebar.scss";
 
 const Sidebar = () => {
-  PowerGlitch.glitch(".glitch-logo-sidebar", { timing: { iterations: 1 } });
-  PowerGlitch.glitch(".glitch-hover", { playMode: "hover" });
+  useEffect(() => {
+    PowerGlitch.glitch(".glitch-logo-sidebar", { timing: { iterations: 1 } });
+    PowerGlitch.glitch(".glitch-hover", { playMode: "hover" });
+  }, []);
   return (
     <div className="nav-bar">
       <Link className="logo glitch-logo-sidebar" to="/">
