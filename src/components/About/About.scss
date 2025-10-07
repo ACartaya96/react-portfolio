@@ -1,0 +1,79 @@
+.about-page {
+    
+    .profile-container {
+        display: flex;
+        margin-left: 10rem;
+        margin-top: 10rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        animation: fadeIn 1s 1.5s backwards;
+
+         img {
+            width: 45rem;
+            padding: 1.5rem;
+            height: auto;
+    
+        }
+
+    .text-zone{
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.5rem;
+        text-align: center;
+        word-wrap: break-word;
+        width: auto;
+        max-width: 900px;
+        h1{
+            font-family: 'Coolvetica';
+            font-size: 5.3rem;
+            margin-left: 3rem;
+
+                &::before{
+                content: '</h1>';
+                font-family: 'La Belle Aurore';
+                color: #00FFFF;
+                font-size: 1.8rem;
+                position: absolute;
+                margin-top: 2rem;
+                margin-left: -5rem;
+                opacity: 0.6;
+            }
+
+            &::after{
+                content: '</h1> </br>';
+                font-family: 'La Belle Aurore';
+                color: #00FFFF;
+                font-size: 1.8rem;
+                position: absolute;
+                margin-top: 2rem;
+                margin-left: 2rem;
+                opacity: 0.6;
+                animation: fadeIn 1s 1.7s backwards;
+                opacity: 0.6;
+            }
+            .about-dotgrid {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                pointer-events: none; /* don't intercept clicks */
+                overflow: hidden;
+            }
+        }
+
+        p {
+            text-align: justify;;
+            font-family: 'Helvetica Neu';
+            font-weight: 300;
+            font-size: 1.4rem;
+            margin: 4rem;
+            letter-spacing: 2px;
+            animation: fadeIn 1s 1.9s backwards;
+        }
+    }
+
+    }
+   
+}

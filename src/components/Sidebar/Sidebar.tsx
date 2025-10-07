@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faGithub,
+  faLinkedin,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import {
   faHome,
   faUser,
   faEnvelope,
@@ -19,7 +24,7 @@ const Sidebar = () => {
   }, []);
   return (
     <div className="nav-bar">
-      <Link className="logo glitch-logo-sidebar" to="/">
+      <Link className="logo glitch-logo-sidebar glitch-hover" to="/">
         <img src={LogoAC} alt="logo" />
       </Link>
       <nav>
@@ -67,11 +72,43 @@ const Sidebar = () => {
               ? "active-link gamedev-link glitch-hover"
               : "inactive-link gamedev-link glitch-hover"
           }
-          to="/cs-projects"
+          to="/gd-projects"
         >
           <FontAwesomeIcon icon={faGamepad} color="4d4d4e" />
         </NavLink>
       </nav>
+      <ul>
+        <li>
+          <a
+            className="glitch-hover"
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/alexandercartaya/"
+          >
+            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+          </a>
+        </li>
+        <li>
+          <a
+            className="glitch-hover git"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/ACartaya96"
+          >
+            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+          </a>
+        </li>
+        <li>
+          <a
+            className="glitch-hover wa"
+            target="_blank"
+            rel="noreferrer"
+            href="https://wa.me/13058070352"
+          >
+            <FontAwesomeIcon icon={faWhatsapp} color="#4d4d4e" />
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };

@@ -1,4 +1,6 @@
 .home-page {
+    width: 100%;
+    height: 100%;
     .text-zone {
         position: absolute;
         left: 10%;
@@ -9,27 +11,30 @@
     }
     h1 { 
         color: white;
-        font-size: 53px;
+        font-size: 5.3rem;
         margin: 0;
+        margin-left: 2rem;
         font-family: 'Coolvetica';
         font-weight: 400;
+        text-align: left;
 
         &::before{
             content: '<h1>';
             font-family: 'La Belle Aurore';
             color: #00FFFF;
-            font-size: 18px;
+            font-size: 1.8rem;
             position: absolute;
             margin-top: -40px;
-            left: 15px;
+            top: 55px;
+            left: -50px;
             opacity: 0.6;
         }
 
         &::after{
-            content: '</h1>';
+            content: '</h1> </br>';
             font-family: 'La Belle Aurore';
             color: #00FFFF;
-            font-size: 18px;
+            font-size: 1.8rem;
             position: absolute;
             margin-top: 18px;
             margin-left: 20px;
@@ -41,12 +46,13 @@
     }
 
     h2 {
-        color: gray;
+        color: rgb(187, 187, 187);
         margin-top: 20px;
+        margin-left: 2rem;
         font-weight: 400;
-        font-size: 11px;
+        font-size: 1.15rem;
         font-family: sans-serif;
-        letter-spacing: 3px;
+        letter-spacing: .3rem;
         animation: fadeIn 1s 1.8s backwards;  
     }
 
@@ -58,12 +64,14 @@
         letter-spacing: 4px;
         font-family: sans-serif;
         text-decoration: none;
-        padding: 10px 20px;
+        text-align: center;
+        padding: 10px 5px;
         border: 1px solid #FF00FF;
         margin-top: 20px;
         float: left;
         animation: fadeInAnimation 1s 1.8s backwards;
         white-space: nowrap;
+
 
 
         &:hover {
@@ -80,16 +88,15 @@
         height: auto;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 1rem;
         bottom: 0;
         left: auto;
-        margin: auto;
+        margin: 1rem;
 
         img{
-            width: auto;
+            width: 100%;
             height: 100%;
             position: absolute;
-            animation: fadeInAnimation 1s backwards;
         }
     }
 

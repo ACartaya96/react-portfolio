@@ -2,8 +2,7 @@
     width: 100%;
     height: 100%;;
     position: absolute;
-
-
+    overflow: auto;
     .tags {
         color: orangered;
         opacity: 0.6;
@@ -35,31 +34,69 @@
         position: absolute;
         will-change: contents;
         width: 100%;
-        height: 90%;
+        height: 100%;
         min-height: 566px;
         opacity: 0;
-        top: 5%;
+        top: 0;
         margin: 0 auto;
         z-index: 1;
         transform-style: preserve-3d;
         animation: fadeIn 1s forwards;
-        animation-delay: 1s;
+        animation-delay: 1.3s;
     }
-}
-.about-page{
-    .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40%;
-        vertical-align: middle;
-        display: table-cell;
-        max-height: 90%;
+    
+    .home-page {
+        margin: 0rem;
+        margin-left: 10rem;
+        height: 100%;
+        width: 100%;
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
 
-        h1{
-            font-size: 50px;
+    .about-page {
+        margin: 0rem;
+        margin-left: 10rem;
+        height: 100%;
+        width: 100%;
+        position: relative; /* create stacking context for absolute dotgrid */
+        align-items: center;
+    }
 
-        }
+    
+    .contact-page {
+        margin: 0rem;
+        margin-left: 10rem;
+        width: 100%;
+        height: 100%;
+        position:relative;
+        align-items: center;
+    }
+
+    .softdev-page {
+        margin: 0rem;
+        margin-left: 10rem;
+        width: 100%;
+        height: auto;
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .gamedev-page {
+        margin: 0rem;
+        margin-left: 10rem;
+        width: 100%;
+        height: auto;
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
     }
 }

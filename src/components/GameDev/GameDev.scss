@@ -1,0 +1,29 @@
+
+.gamedev-page{
+    margin: 10rem;
+    margin-left: 10rem;
+    width: 90%;
+    height: auto;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    h1{
+        font-family: 'Coolvetica';
+        font-size: 5.3rem;
+        position: relative;
+        margin-bottom: 1.6rem;
+        text-align: center;
+    }
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        width: 100%;
+        position: relative;
+        
+    }
+}

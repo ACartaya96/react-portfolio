@@ -3,6 +3,7 @@ import { PowerGlitch } from "powerglitch";
 import { useEffect } from "react";
 import LogoAC from "../../assets/images/logo-ac.png";
 import "./Home.scss";
+import DotGrid from "../DotGrid/DotGrid";
 
 function Home() {
   useEffect(() => {
@@ -25,16 +26,27 @@ function Home() {
 
   return (
     <div className="container home-page">
+         <div style={{ width: "100%", height: "100%", position: "relative", overflow: "auto" }}>
+            <DotGrid
+              dotSize={3}
+              gap={15}
+              baseColor="#6e6e6eff"
+              activeColor="#00ffff"
+              proximity={120}
+              shockRadius={250}
+              shockStrength={7}
+              resistance={750}
+              returnDuration={1.5}
+            />
+          </div>
       <div className="text-zone">
         <h1>
           Hi, <br />
           I'm Alexander Cartaya
           <br />
-          Software Developer
+          Fullstack Software Developer
         </h1>
-        <h2>
-          Fullstack Developer / Game Developer / Ai Machine Learning Enthusiast
-        </h2>
+        <h2>React / Node / Docker / etc.</h2>
         <Link to="/contact" className="flat-button glitch-hover-contact">
           CONTACT ME
         </Link>

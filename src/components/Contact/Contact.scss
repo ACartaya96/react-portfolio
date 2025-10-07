@@ -1,0 +1,161 @@
+// Contact form styles - polished and responsive
+.contact-page {
+    position: relative;
+    z-index: 1;
+    .contact-dotgrid {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    .text-zone {
+        h1 {
+                font-family: 'Coolvetica';
+                font-size: 5.3rem;
+                text-align: center;
+                &::before{
+                    content: '</h1>';
+                    font-family: 'La Belle Aurore';
+                    color: #00FFFF;
+                    font-size: 1.8rem;
+                    position: absolute;
+                    margin-top: 2rem;
+                    margin-left: -5rem;
+                    opacity: 0.6;
+                }
+
+                &::after{
+                    content: '</h1>';
+                    font-family: 'La Belle Aurore';
+                    color: #00FFFF;
+                    font-size: 1.8rem;
+                    position: absolute;
+                    margin-top: 2rem;
+                    margin-left: 2rem;
+                    opacity: 0.6;
+                    animation: fadeIn 1s 1.7s backwards;
+                    opacity: 0.6;
+                }
+        }
+        
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2.4rem 1.6rem;
+    }
+
+    .contact-form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 1.6rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.35);
+        backdrop-filter: blur(6px);
+    }
+
+    .contact-form label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        font-size: 1.4rem;
+        color: var(--text-color, #e6eef8);
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        margin-top: 0.5rem;
+        padding: 0.9rem 1rem;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 1.4rem;
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text-color, #e6eef8);
+        transition: box-shadow 150ms ease, transform 150ms ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        box-shadow: 0 6px 18px rgba(11, 116, 222, 0.18);
+        transform: translateY(-1px);
+        border-color: rgba(11, 116, 222, 0.9);
+    }
+
+    .contact-form textarea {
+        min-height: 12rem;
+        resize: vertical;
+    }
+
+        .form-actions {
+            display: flex;
+            justify-content: center; /* center the button horizontally */
+            margin-top: 0.6rem;
+            width: 100%;
+        }
+
+    .flat-button {
+        background: cyan;
+        color: #212121;
+        font-weight: 500;
+        font-family: sans-serif;
+        letter-spacing: .2rem;
+        padding: 0.75rem 1.4rem;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 1.45rem;
+        box-shadow: 0 8px 22px rgba(3, 50, 100, 0.25);
+        transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+
+    .flat-button:hover {
+        transform: translateY(-3px);
+        background: fuchsia;
+        box-shadow: 0 14px 36px rgba(3, 50, 100, 0.32);
+    }
+
+    @media (min-width: 720px) {
+        .contact-form {
+            grid-template-columns: 1fr 1fr;
+            gap: 1.4rem;
+        }
+
+        /* Make message label (assumed to be the textarea label) span full width */
+        .contact-form label.message {
+            grid-column: 1 / -1;
+        }
+
+            .form-actions {
+                grid-column: 1 / -1;
+                justify-content: center; /* ensure centered on wide screens */
+            }
+    }
+
+    .form-actions.centered {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .form-actions .primary {
+        padding: 0.8rem 1.2rem;
+        min-width: 10rem;
+        background: #0b74de;
+        border: none;
+        color: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .error {
+        color: #ff6b6b;
+        font-size: 1.2rem;
+    }
+}

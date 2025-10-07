@@ -1,0 +1,87 @@
+.project-embed {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+   
+
+    a{
+        flex:1 0 auto;
+        text-decoration: none;
+        width: 80rem;
+        iframe, img {
+            flex: 1 0 auto;
+            border: none;
+            border-radius: 12px;
+            min-height: 300px;
+            width: 80rem;
+            height: 46rem;
+            object-fit: cover;            
+            background: rgba(255, 255, 255, 0.02);
+            box-shadow: 0 6px 18px rgba(2, 6, 23, 0.35);
+            backdrop-filter: blur(6px);
+        }
+    }
+    .image-loading {
+        width: 80rem;
+        height: 46rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.18);
+        margin: 0 auto;
+    }
+
+    .loading-bar {
+        width: 60%;
+        height: 8px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.16));
+        position: relative;
+        overflow: hidden;
+    }
+
+    .loading-bar::after {
+        content: "";
+        position: absolute;
+        left: -40%;
+        top: 0;
+        bottom: 0;
+        width: 40%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+        animation: loading-sweep 1.4s infinite linear;
+    }
+
+    @keyframes loading-sweep {
+        from { transform: translateX(0%); }
+        to { transform: translateX(250%); }
+    }
+    .embed-info {
+        display: flex;
+        flex-direction: column;
+        flex: 225 0 auto;
+        text-align: center;
+        padding-left: 3.5rem;
+
+        h3 {
+            font-size: 3.3rem;   
+        }
+
+        p {
+            flex: 0 0 auto;
+            font-size: 1.8rem;
+            letter-spacing: 1.5px;
+            max-width: 540px;
+            margin: auto;
+            word-wrap: break-word;
+            margin-top: 1rem;
+            color: var(--muted-text, #9fb3c8);
+
+        }
+  
+    }
+ 
+}
