@@ -10,7 +10,7 @@ function SoftDev() {
           <DotGrid
             dotSize={3}
             gap={15}
-            baseColor="#6e6e6eff"
+            baseColor="#545454ff"
             activeColor="#00ffff"
             proximity={120}
             shockRadius={250}
@@ -19,7 +19,7 @@ function SoftDev() {
             returnDuration={1.5}
           />
         </div>
-      <h1>SoftDev</h1>
+      <h1>SoftDev Projects</h1>
       <div className="project-container">
           <ProjectEmbed
             src="https://fullstack-developer-capstone-1.onrender.com"

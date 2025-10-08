@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./ProjectEmbed.scss";
+import LoadingBar from "./LoadingBar/LoadingBar";
 
 type ProjectEmbedProps = {
   src: string;
@@ -32,6 +33,7 @@ const ProjectEmbed: React.FC<ProjectEmbedProps> = ({
   useEffect(() => {
     // reset to loading state whenever src or timeoutMs changes
     setLoaded(null);
+    setImageLoaded(null);
 
     // start timeout to mark as failed if not loaded in time
     timeoutRef.current = window.setTimeout(() => {
@@ -98,11 +100,7 @@ const ProjectEmbed: React.FC<ProjectEmbedProps> = ({
           className="iframe-fallback"
         >
           {/* show loading placeholder while image is being fetched */}
-          {imageLoaded !== true ? (
-            <div className="image-loading" aria-hidden="true">
-              <div className="loading-bar" />
-            </div>
-          ) : null}
+          {imageLoaded !== true ? <LoadingBar /> : null}
           <img
             src={fallbackSrc}
             alt={`${title ?? "Project"} (open in new tab)`}
@@ -130,11 +128,7 @@ const ProjectEmbed: React.FC<ProjectEmbedProps> = ({
           rel="noopener noreferrer"
           className="iframe-fallback"
         >
-          {imageLoaded !== true ? (
-            <div className="image-loading" aria-hidden="true">
-              <div className="loading-bar" />
-            </div>
-          ) : null}
+          {imageLoaded !== true ? <LoadingBar /> : null}
           <img
             src={fallbackSrc}
             alt={`${title ?? "Project"} (open in new tab)`}
@@ -144,10 +138,9 @@ const ProjectEmbed: React.FC<ProjectEmbedProps> = ({
           />
         </a>
       ) : loaded === null ? (
-        // loading skeleton while we wait for onLoad or timeout
-        <div className="embed-loading" aria-busy="true">
-          <div className="loading-box" />
-        </div>
+        // show the loading bar while iframe is pending; the LoadingBar
+        // will stay visible until handleLoad sets loaded=true or timeout sets loaded=false
+        <LoadingBar />
       ) : (
         <iframe
           ref={(el) => {

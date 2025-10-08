@@ -1,20 +1,20 @@
 .nav-bar {
     background-color: #181818;
-    width: 10rem;
+    width: 5.21vw;
     height: 100%;
     position: absolute;
     z-index: 3;
-    min-height: 500px;
+    min-height: 46.3vh;
 
     .logo {
         display: block;
         width: 100%;
 
-        img {
+            img {
             position: relative;
             justify-self: center;
             display: block;
-            margin: 8px 8px;
+            margin: 0.42vw 0.42vw;
             width: 100%;
             height: auto;
         }
@@ -25,17 +25,17 @@
         display: block;
         text-align: center;
         position: absolute;
-        height: 270px;
-        top: 50%;
-        margin-top: -120px;
-        width: 100%;
+    height: 25vh;
+    top: 50%;
+    margin-top: -11.11vh;
+    width: 100%;
 
         a {
-            font-size: 22px;
+            font-size: 1.15vw;
             color: whitesmoke;
             display: block;
-            line-height: 51px;
-            height: 51px;
+            line-height: 4.72vh;
+            height: 4.72vh;
             position: relative;
             text-decoration: none;
 
@@ -54,10 +54,10 @@
                 }
             }
 
-            &:after {
+                &:after {
                 content: '';
-                font-size: 12px;
-                letter-spacing: 2px;
+                font-size: 0.63vw;
+                letter-spacing: 0.104vw;
                 position: absolute;
                 bottom: 0;
                 display: block;
@@ -107,7 +107,7 @@
     ul{
         padding: 0;
         list-style: none;
-        font-size: 1.8rem;
+    font-size: 0.94vw;
         text-align: center;
         text-decoration: none;
         
@@ -129,11 +129,11 @@
 
                 &:after {
                     content: '';
-                    font-size: 12px;
-                    letter-spacing: 2px;
+                    font-size: 0.63vw;
+                    letter-spacing: 0.104vw;
                     align-self: center;
                     position: relative;
-                    bottom: 2rem;
+                    bottom: 1.85vh;
                     display: block;
                     width: 100%;
                     opacity: 0;

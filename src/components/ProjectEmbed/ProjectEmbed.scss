@@ -1,22 +1,25 @@
 .project-embed {
-    width: 75%;
-    margin: auto;
+    width: 100%;
+    /* 5rem = 50px -> 50/1080*100 = 4.63vh */
+    margin-top: 4.63vh;
     display: flex;
     flex-direction: row;
-    flex: 1 0 auto;
    
 
     a{
         flex:1 0 auto;
         text-decoration: none;
-        width: 80rem;
+    /* 80rem = 800px -> 800/1920*100 = 41.67vw */
+    width: 41.67vw;
         iframe, img {
             flex: 1 0 auto;
+            flex-shrink: 1;
             border: none;
             border-radius: 12px;
-            min-height: 300px;
-            width: 80rem;
-            height: 46rem;
+            /* min-height: 300px -> 300/1080*100 = 27.78vh */
+            min-height: 27.78vh;
+            width: 43vw;
+            height: auto;
             object-fit: cover;            
             background: rgba(255, 255, 255, 0.02);
             box-shadow: 0 6px 18px rgba(2, 6, 23, 0.35);
@@ -24,8 +27,9 @@
         }
     }
     .image-loading {
-        width: 80rem;
-        height: 46rem;
+        /* 80rem = 800px -> 41.67vw; 46rem = 460px -> 460/1080*100 = 42.59vh */
+        width: 41.67vw;
+        height: 42.59vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -36,48 +40,50 @@
     }
 
     .loading-bar {
-        width: 60%;
-        height: 8px;
-        border-radius: 999px;
-        background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.16));
+        /* 120px -> 120/1920*100 = 6.25vw; 22px -> 22/1080*100 = 2.04vh */
+        width: 6.25vw;
+        height: 2.04vh;
+        border-radius: 20px;
+        color: #514b82;
+        border: 2px solid;
         position: relative;
-        overflow: hidden;
     }
 
-    .loading-bar::after {
-        content: "";
-        position: absolute;
-        left: -40%;
-        top: 0;
-        bottom: 0;
-        width: 40%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
-        animation: loading-sweep 1.4s infinite linear;
+    .loading-bar::before {
+       content: "";
+       position: absolute;
+       margin: 2px;
+       inset: 0 100% 0 0;
+       border-radius: inherit;
+       background: currentColor;
+       animation: l6 6s ease-in;
     }
 
-    @keyframes loading-sweep {
-        from { transform: translateX(0%); }
-        to { transform: translateX(250%); }
+    @keyframes l6 {
+        100% {inset:0}
     }
+
     .embed-info {
         display: flex;
         flex-direction: column;
-        flex: 225 0 auto;
+        flex: 1 0 auto;
         text-align: center;
-        padding-left: 3.5rem;
+       
 
         h3 {
             font-size: 3.3rem;   
         }
 
         p {
-            flex: 0 0 auto;
-            font-size: 1.8rem;
+            flex: 1 0 auto;
+            font-size: .75vw;
             letter-spacing: 1.5px;
-            max-width: 540px;
+            /* 540px -> 540/1920*100 = 28.13vw */
+            max-width: 28.13vw;
             margin: auto;
-            word-wrap: break-word;
-            margin-top: 1rem;
+            word-wrap: normal;
+            /* 1rem = 10px -> 10/1080*100 = 0.93vh */
+            margin-top: 0.93vh;
             color: var(--muted-text, #9fb3c8);
 
         }

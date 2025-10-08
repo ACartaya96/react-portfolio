@@ -5,20 +5,20 @@ import "./GameDev.scss";
 function GameDev() {
   return (
     <div className="container gamedev-page">
-       <div style={{ width: "100%", height: "100%", position: "relative" }}>
-          <DotGrid
-            dotSize={3}
-            gap={15}
-            baseColor="#6e6e6eff"
-            activeColor="#00ffff"
-            proximity={120}
-            shockRadius={250}
-            shockStrength={7}
-            resistance={750}
-            returnDuration={1.5}
-          />
-        </div>
-      <h1>GameDev</h1>
+      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+        <DotGrid
+          dotSize={3}
+          gap={15}
+          baseColor="#545454ff"
+          activeColor="#00ffff"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={7}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      </div>
+      <h1>GameDev Projects</h1>
       <div className="project-container">
         <ProjectEmbed
           src="https://acartaya96.itch.io/the-apprentice-knight"

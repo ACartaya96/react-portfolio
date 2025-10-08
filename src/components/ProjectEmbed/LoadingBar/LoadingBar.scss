@@ -1,7 +1,8 @@
 /* HTML: <div class="loader"></div> */
 .loader {
-  width: 120px;
-  height: 22px;
+  /* 120px -> 6.25vw, 22px -> 2.04vh */
+  width: 6.25vw;
+  height: 2.04vh;
   border-radius: 20px;
   color: #514b82;
   border: 2px solid;
@@ -10,7 +11,8 @@
 .loader::before {
   content: "";
   position: absolute;
-  margin: 2px;
+  /* 2px -> 0.104vw */
+  margin: 0.104vw;
   inset: 0 100% 0 0;
   border-radius: inherit;
   background: currentColor;
